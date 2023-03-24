@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "./components/layout";
 
 
@@ -33,7 +34,7 @@ export default function Home({posts}){
                             {posts.data.arr.map(dats => (
                                     <li className="m-4 w-60 relative" key={dats.endpoint}>
                                         <a href={"/detail/"+dats.endpoint}>
-                                            <img className="w-full" src={dats.thumb} alt="thumbnail"/>
+                                            <img src={dats.thumb} className="w-full" alt="thumb"/>
                                             <div className="w-full p-2 font-bold text-xl absolute bottom-0 left-0 bg-opacity-40 bg-black backdrop-blur-sm">{dats.judul}</div>
                                             <div className="p-2 absolute top-1 left-1 bg-teal-600">{dats.episodeBaru}</div>
                                         </a>
