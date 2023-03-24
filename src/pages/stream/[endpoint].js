@@ -1,4 +1,4 @@
-import Layout from "../components/Layout" 
+import Layout from "../components/Layout.js" 
 
 export async function getServerSideProps({query}){
 
