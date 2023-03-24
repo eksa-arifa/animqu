@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Layout from "./components/Layout.js";
+import Layout from "./components/layout";
 
 
 export async function getStaticProps() {
