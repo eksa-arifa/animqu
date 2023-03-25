@@ -22,16 +22,16 @@ export default function Layout(props){
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
             </Head>
             <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                <nav className="flex justify-between items-center py-5 px-10 bg-teal-600">
+                <nav className="flex justify-between items-center py-5 px-10 bg-teal-600 w-full fixed top-0 left-0 z-40">
                     <div className="text-2xl sm:text-4xl font-bold">AnimQu</div>
-                    <ul className={`sm:p-0 p-4 ${(navbar)? "flex" : "hidden"} sm:flex sm:flex-row flex-col z-50 sm:static absolute top-20 sm:bg-transparent bg-teal-600 right-0 sm:justify-evenly sm:items-center`}>
-                        <li className="mx-3 font-bold"><a className="hover:text-teal-200" href="#">Home</a></li>
-                        <li className="mx-3 font-bold"><a className="hover:text-teal-200" href="#">About</a></li>
-                        <li className="mx-3 font-bold"><a className="hover:text-teal-200" href="#">Donate</a></li>
+                    <ul className={`sm:p-0 p-4 flex sm:flex sm:flex-row ${(navbar)? '' : 'translate-x-96'} sm:translate-x-0 sm:pt-0 pt-20 transition right-0 flex-col z-10 sm:static fixed top-0 sm:bg-transparent bg-teal-600 sm:justify-evenly sm:items-center w-1/2 sm:w-auto sm:h-auto h-screen`}>
+                        <li className="mx-3 sm:my-0 my-5 font-bold"><a className="hover:text-teal-200" href="/">Home</a></li>
+                        <li className="mx-3 sm:my-0 my-5 font-bold"><a className="hover:text-teal-200" href="/about">About</a></li>
+                        <li className="mx-3 sm:my-0 my-5 font-bold"><a className="hover:text-teal-200" target="_blank" href="https://saweria.co/animqu">Donate</a></li>
                     </ul>
-                    <i className="fa fa-bars sm:hidden" onClick={toggle}></i>
+                    <i className={`sm:hidden ${(navbar)?'fa-solid fa-xmark': 'fa fa-bars'} absolute right-10 top-8 z-50`} onClick={toggle}></i>
                 </nav>
-                <div>
+                <div className="pt-20">
                     {props.children}
 
                     <footer className="w-full p-5 bg-teal-600 text-center font-bold text-xl mt-6">

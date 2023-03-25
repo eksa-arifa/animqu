@@ -19,7 +19,7 @@ export default function Detail({posts}){
         <>
             <Layout title="Detail">
                 <div className="w-full sm:w-1/2 flex justify-center mx-auto p-5 sm:flex-row flex-col sm:items-start items-center">
-                    <div className="mr-5">
+                    <div className="sm:mr-5">
                         <img src={post.fotonime} alt="Thumbnail"/>
                     </div>
                     <div className="my-2 sm:my-0">
