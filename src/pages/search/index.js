@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useState } from "react"
 import Layout from "../components/layout"
 
@@ -36,11 +37,11 @@ export default function Search({posts}){
                                 (post.length != 0)? (
                                     post.map((item)=>(
                                         <li className="m-4 sm:w-60 w-32 sticky" key={item.endpoint}>
-                                        <a href={"/detail/"+item.endpoint}>
+                                        <Link href={"/detail/"+item.endpoint}>
                                             <img src={item.thumb} className="w-full" alt="thumb"/>
                                             <div className="w-full sm:p-2 p-1 font-bold sm:text-xl text-xs absolute bottom-0 left-0 bg-opacity-40 bg-black backdrop-blur-sm">{item.nama}</div>
                                             <div className="p-1 sm:p-2 absolute top-1 left-1 bg-teal-600 text-xs sm:text-lg">{item.rating}</div>
-                                        </a>
+                                        </Link>
                                         </li>
                                     ))
                                 ) : (<div className="h-screen flex justify-center items-center font-bold">Data Tidak Diketemukan</div>)
