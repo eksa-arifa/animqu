@@ -27,8 +27,8 @@ export default function Layout(props){
                 <nav className="flex justify-between items-center py-5 px-10 bg-teal-600 w-full fixed top-0 left-0 z-40">
                     <div className="text-2xl sm:text-4xl font-bold">AnimQu</div>
                     <ul className={`sm:p-0 p-4 flex sm:flex sm:flex-row ${(navbar)? '' : 'translate-x-96'} sm:translate-x-0 sm:pt-0 pt-20 transition right-0 flex-col z-10 sm:static fixed top-0 sm:bg-transparent bg-teal-600 sm:justify-evenly sm:items-center w-1/2 sm:w-auto sm:h-auto h-screen`}>
-                        <li className="mx-3 sm:my-0 my-5 font-bold"><button onClick={()=> router.push('/')}>Home</button></li>
-                        <li className="mx-3 sm:my-0 my-5 font-bold"><button onClick={()=> router.push('/about')}>About</button></li>
+                        <li className="mx-3 sm:my-0 my-5 font-bold"><button className="hover:text-teal-200" onClick={()=> router.push('/')}>Home</button></li>
+                        <li className="mx-3 sm:my-0 my-5 font-bold"><button className="hover:text-teal-200" onClick={()=> router.push('/about')}>About</button></li>
                         <li className="mx-3 sm:my-0 my-5 font-bold"><a className="hover:text-teal-200" target="_blank" href="https://saweria.co/animqu">Donate</a></li>
                     </ul>
                     <i className={`sm:hidden ${(navbar)?'fa-solid fa-xmark': 'fa fa-bars'} absolute right-10 top-8 z-50`} onClick={toggle}></i>
