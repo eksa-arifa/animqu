@@ -2,7 +2,7 @@ import Image from "next/image";
 import Layout from "./components/layout";
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const res = await fetch('https://otakudesuapieksa.vercel.app/terbaru')
     const posts = await res.json()
