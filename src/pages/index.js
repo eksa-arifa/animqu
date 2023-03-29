@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Layout from "./components/layout";
+import { useRouter } from "next/router";
 
 
 export async function getServerSideProps() {
@@ -16,6 +17,8 @@ export async function getServerSideProps() {
 
 
 export default function Home({posts}){
+
+    const router = useRouter()
     
 
     return(
@@ -33,11 +36,11 @@ export default function Home({posts}){
                         <ul className="flex justify-evenly flex-wrap">
                             {posts.data.arr.map(dats => (
                                     <li className="m-4 sm:w-60 w-32 sticky" key={dats.endpoint}>
-                                        <a href={"/detail/"+dats.endpoint}>
+                                        <button className="w-full" onClick={()=> router.push("/detail/"+dats.endpoint)}>
                                             <img src={dats.thumb} className="w-full" alt="thumb"/>
                                             <div className="w-full p-1 sm:p-2 font-bold sm:text-xl text-xs absolute bottom-0 left-0 bg-opacity-40 bg-black backdrop-blur-sm">{dats.judul}</div>
                                             <div className="p-1 sm:p-2 absolute top-1 left-1 bg-teal-600 text-xs sm:text-lg">{dats.episodeBaru}</div>
-                                        </a>
+                                        </button>
                                     </li>
                             ))}
                         </ul>
