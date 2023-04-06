@@ -17,7 +17,7 @@ export default function About(){
                         dan sarannya guyys <i className="fa fa-heart text-pink-600"></i>...
                     </div>
                     <div className="w-full text-center font-bold">
-                        Email: animqu@gmail.com
+                        Email: animqucontact@gmail.com
                     </div>
                 </div>
             </Layout>
