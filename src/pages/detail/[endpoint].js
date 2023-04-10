@@ -1,4 +1,5 @@
 import Layout from "../components/layout"
+import Image from "next/image"
 import { useRouter } from "next/router"
 
 
@@ -22,7 +23,7 @@ export default function Detail({posts}){
             <Layout title="Detail">
                 <div className="w-full sm:w-1/2 flex justify-center mx-auto p-5 sm:flex-row flex-col sm:items-start items-center">
                     <div className="sm:mr-5">
-                        <img src={post.fotonime} alt="Thumbnail"/>
+                        <Image src={post.fotonime} width={500} height={600} alt="Thumbnail"/>
                     </div>
                     <div className="my-2 sm:my-0">
                         <div className="font-bold text-2xl">{post.judul}</div>
