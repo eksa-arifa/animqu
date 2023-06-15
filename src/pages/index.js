@@ -48,6 +48,12 @@ export default function Home({posts}){
                     </div>
                 </div>
                 </div>
+
+                <div className="w-screen fixed h-screen bg-black bg-opacity-75 flex justify-center items-center z-50">
+                    <div className="w-1/2 bg-white rounded-md p-20">
+                        Beralihlah ke <a href="https://animazaa.vercel.app">Animazaa</a> versi upgrade dari animqu, web ini sudah tidak dikembangkan...
+                    </div>
+                </div>
             </Layout>
         </>
     )
